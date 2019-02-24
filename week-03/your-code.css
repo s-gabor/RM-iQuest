@@ -37,8 +37,10 @@ div:first-of-type ul li {
 
 /* **************   Style for "Imporves"   ***************/
 div:last-of-type {
+	width: 300px;
+	margin: 0 auto;
 	background-color: rgba(255, 255, 255, 0.5);
-	margin-left: 15%;
+	/*margin-left: 15%;*/
 }
 
 div:last-of-type ul li {
