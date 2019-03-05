@@ -32,10 +32,10 @@ checkUserInputBoxes();
 document.addEventListener('keyup', (event) => {
 	displayedError.innerHTML = 'none';
 	displayedResult.innerHTML = 'Press <strong>Calculate!</strong>';
-	let userInputBox = event.target;
+	const userInputBox = event.target;
 	userInputBox.removeAttribute('style');
-	let userInputValue = event.target.value;
-	let outputErrorMessage = checkUserInputBoxes();
+	const userInputValue = event.target.value;
+	const outputErrorMessage = checkUserInputBoxes();
 	if (outputErrorMessage) {
 		displayedError.innerHTML = outputErrorMessage;
 	}
@@ -45,7 +45,7 @@ document.addEventListener('keyup', (event) => {
 displayedResult.innerHTML = 'Press <strong>Calculate!</strong>';
 
 function run() {
-	let result = first.value*1 + second.value*1 + third.value * fourth.value;
+	const result = first.value*1 + second.value*1 + third.value * fourth.value;
 	is_integer(result.toString()) && displayedError.innerText === 'none'
 		? displayedResult.innerHTML = `<strong>${result}</strong>`
 		: displayedResult.innerHTML = 'Can not calculate the expression. Please check the highlighted field(s)!'
