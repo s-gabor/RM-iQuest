@@ -1,46 +1,129 @@
-html { height: 100%; }
-body {
-	font-family: Arial;
-	min-height: 100%;
-	min-width: 768px;
-	background-color: #ccd8c1;
-	margin: 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+:root {
+    --main-color: #ccd8c1;		/*background: home, list, details*/
+    --primary-color: #747474;	/*text: home, list, details*/
+    --secondary-color: white;	/*text: navigation, footer*/
+    --third-color: #ec7a23;		/*backgroung: button, text: price*/
+    --hover-color: #ec7a23;		/*navigation links*/
+    --main-font: Arial, sans-serif;		/*all text*/
+	--title-font: Pacifico, cursive;	/*company name*/
+	--small: 12px;			/*btn--sm*/
+	--medium: 16px;				/*btn--m*/
+	--large: 20px;				/*text--m*/
+	--xl: 36px;				/*btn--lg*/
+	--xxl: 72px;			/*text--lg*/
 }
+
+html { 
+	/* height: 100%;  */
+	font-size:16px; 
+}
+body {
+	font-family: var(--main-font);
+	/* min-height: 100%; */
+	background-color: var(--main-color);
+	margin: 0;
+}
+
+.btn {
+	color: var(--secondary-color);
+	background-color: var(--third-color);
+	padding: 0.5em 1em;
+	border: var(--third-color);
+	border-radius: 5px;
+}
+.btn:hover { cursor: pointer; }
+.btn--sm { font-size: var(--small); }
+.btn--m { font-size: var(--medium); }
+.btn--xl { font-size: var(--xl); margin: 1.25em 0;}
+.btn--xl:hover { transform: scale(1.1); transition: 0.5s;}
 
 .link {
 	text-decoration: none;
-	color: white;
+	color: var(--secondary-color);
 	cursor: pointer;
 }
 
-.text--m { font-size: 3vh; }
-.text--lg { font-size: 8vh; }
-.text--centered { text-align: center; }
-.text--styled { font-family: 'Pacifico', cursive; }
-
-.btn {
-	color: white;
-	background-color: #ec7a23;
-	padding: 0.5em 2.5em;
-	border:#ec7a23;
-	border-radius: 3px;
+/* ************************************************************ */
+						/* HOMEPAGE */
+/* ************************************************************ */
+.main__home {
+	min-height: 75vh; 
+	color: var(--primary-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center; 
+	justify-content: center;
 }
-.btn:hover { cursor: pointer; }
-.btn--sm { font-size: 0.5em; }
-.btn--m { font-size: 1em; }
-.btn--lg { font-size: 4vh; }
-.btn--lg:hover { transform: scale(1.1); transition: 0.5s;}
-
+.main__home__title {
+	text-align: center;
+	font-family: var(--title-font);
+	font-size: var(--xxl);
+}
+.main__home__motto {
+	font-size: var(--large);
+	text-align: center;
+	line-height: 1.5;
+	margin: 1em;
+}
+/* ************************************************************ */
+						/* FOOTER */
+/* ************************************************************ */
 .footer {
-	color: white;
-	background-color: #747474;
-	display: grid;
-	grid-template-columns: 4fr 6fr 2fr;
+	color: var(--secondary-color);
+	background-color: var(--primary-color);
 	padding: 1em;
+	/* min-height: 25vh; */
+	position:absolute;
+   	bottom:0;
+   	width:100%;
 }
+.footer__top {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 1em;
+}
+.footer__top__links {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+.footer__top__p {
+	display: none;
+}
+.footer__top__logo {
+	padding: 0em 2em;
+	width: 100px;
+	height: 100px;
+}
+.footer__bottom {
+	margin-top: 1em;
+	display: block;
+	text-align: center;
+}
+.footer__bottom__link {
+	color: var(--secondary-color);
+}
+@media all and (min-width: 768px) {
+	.footer__top {
+		display: grid;
+		grid-template-columns: 4fr 6fr 2fr;
+	}
+	.footer__top__p {
+		display: inline;
+		padding-left: 2em;
+	}
+}
+
+
+
+
+
+.text--m { font-size: var(--lg-font); }
+.text--lg { font-size: var(--xxl-font); }
+.text--centered { text-align: center; }
+.text--styled { font-family: var(--title-font); }
+
 
 .container { padding: 0 3em; margin: 0;}
 .container__list {
@@ -65,10 +148,11 @@ body {
 .flex__col--center-around { align-items: center; justify-content: space-around; }
 .flex__col--between { justify-content: space-between; }
 
-.logo {
-	max-width: 100px;
-	max-height: 100px;
+
+/* .b {
+	border: 2px solid red;
 }
+.block { display: block; } */
 
 /* *************** Navigation Bar *************** */
 .nav {
@@ -77,14 +161,6 @@ body {
 	
 }
 ul > li { margin: 0 1em; }  /*WHY I can't use a class here? If I do, it disables the push class!!!*/
-
-
-
-/* *************** Homepage *************** */
-.homepage { 
-	min-height: 75vh; 
-	color: #747474; 
-}
 
 
 /* *************** Pruducts View *************** */

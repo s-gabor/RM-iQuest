@@ -2,52 +2,57 @@
 <html> 
 <head>
 	<title>Carrot Store</title>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
+
 	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../css/reset.css">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
-	<main class="homepage green flex__col flex__col--center-around">
+	<main class="main__home">
 		<div>
-			<p class="text text--lg text--styled text--centered no-margin">Bunbun's</p>
-			<p class="text text--m text--centered no-margin">At the heart of great taste. Since 1905.</p>
+			<p class="main__home__title">Bunbun's</p>
+			<p class="main__home__motto">At the heart of great taste. Since&nbsp;1905.</p>
 		</div>
 
-		<a href="./list.html"><button class="btn btn--lg">See the goods</button></a>
+		<a href="./list.html"><button class="main__home__btn btn btn--xl">See the goods</button></a>
 	</main>
 
-
 	<footer class="footer">
-		<div class="flex__col flex__col--right pad1">
-			<p><a class="link" href="#">RSS Feed</a></p>
-			<p><a class="link" href="#">Twitter</a></p>
-			<p><a class="link" href="#">Contact</a></p>
-		</div>
-
-		<div class="flex__col pad1">
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
-			<a class="link" href="">&copy; 2007-2019 Bunbun's & CO</a>
-		</div>
-
-		<div class="flex__col flex__col--centered">
-			<svg 
-				aria-hidden="true" 
-				focusable="false" 
-				data-prefix="fas" 
-				data-icon="carrot" 
-				class="svg-inline--fa fa-carrot fa-w-16 logo" 
-				role="img" 
-				xmlns="http://www.w3.org/2000/svg" 
-				viewBox="0 0 512 512"
-			>
-				<path 
-					fill="currentColor" 
-					d="M298.2 156.6c-52.7-25.7-114.5-10.5-150.2 32.8l55.2 55.2c6.3 6.3 6.3 16.4 0 22.6-3.1 3.1-7.2 4.7-11.3 4.7s-8.2-1.6-11.3-4.7L130.4 217 2.3 479.7c-2.9 6-3.1 13.3 0 19.7 5.4 11.1 18.9 15.7 30 10.3l133.6-65.2-49.2-49.2c-6.3-6.2-6.3-16.4 0-22.6 6.3-6.2 16.4-6.2 22.6 0l57 57 102-49.8c24-11.7 44.5-31.3 57.1-57.1 30.1-61.7 4.5-136.1-57.2-166.2zm92.1-34.9C409.8 81 399.7 32.9 360 0c-50.3 41.7-52.5 107.5-7.9 151.9l8 8c44.4 44.6 110.3 42.4 151.9-7.9-32.9-39.7-81-49.8-121.7-30.3z"
+		<div class="footer__top">
+			<div class="footer__top__links">
+				<p><a class="link" href="#">RSS Feed</a></p>
+				<p><a class="link" href="#">Twitter</a></p>
+				<p><a class="link" href="#">Contact</a></p>
+			</div>
+	
+			<div class="footer__top__p">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</div>
+		
+			<div class="footer__top__logo">
+				<svg 
+					aria-hidden="true" 
+					focusable="false" 
+					data-prefix="fas" 
+					data-icon="carrot" 
+					class="svg-inline--fa fa-carrot fa-w-16" 
+					role="img" 
+					xmlns="http://www.w3.org/2000/svg" 
+					viewBox="0 0 512 512"
 				>
-				</path>
-			</svg>
+					<path 
+						fill="currentColor" 
+						d="M298.2 156.6c-52.7-25.7-114.5-10.5-150.2 32.8l55.2 55.2c6.3 6.3 6.3 16.4 0 22.6-3.1 3.1-7.2 4.7-11.3 4.7s-8.2-1.6-11.3-4.7L130.4 217 2.3 479.7c-2.9 6-3.1 13.3 0 19.7 5.4 11.1 18.9 15.7 30 10.3l133.6-65.2-49.2-49.2c-6.3-6.2-6.3-16.4 0-22.6 6.3-6.2 16.4-6.2 22.6 0l57 57 102-49.8c24-11.7 44.5-31.3 57.1-57.1 30.1-61.7 4.5-136.1-57.2-166.2zm92.1-34.9C409.8 81 399.7 32.9 360 0c-50.3 41.7-52.5 107.5-7.9 151.9l8 8c44.4 44.6 110.3 42.4 151.9-7.9-32.9-39.7-81-49.8-121.7-30.3z"
+					>
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<a class="footer__bottom__link" href="">&copy; 2007-2019 Bunbun's & CO</a>
 		</div>
 	</footer>
 </body>
