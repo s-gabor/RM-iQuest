@@ -2,78 +2,80 @@
 <html>
 <head>
 	<title>Products</title>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
 	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
-	<nav class="nav">
-		<ul class="container container__list">
-			<li class="text--m text--styled">Bunbun's</li>
-			<li><a class="link" href="./home.html">Home</a></li>
-			<li><a class="link" href="./list.html">List</a></li>
-			<li class="push"></li>
-			<li><a class="link fas fa-shopping-cart" href="#">&nbsp;Cart</a></li>
-			<li><a class="link" href="#">Log&nbsp;In</a></li>
-		</ul>
-	</nav>
+		<nav class="nav">
+				<span class="active nav__title">Bunbun's</span>
+				<div id="myLinks">
+					<a class="" href="./home.html">Home</a>
+					<a class="" href="./list.html">List</a>
+					<span class="push" href="#"></span>
+					<a class=" fas fa-shopping-cart" href="#">&nbsp;Cart</a>
+					<a class="" href="#">Log&nbsp;In</a>
+				</div>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					<i class="fa fa-bars fa-2x"></i>
+				</a>
+			</nav>
 
-	<main class="green gray">
-		<div class="flex">
-			<div class="margin3">
-				<img src="../mocks/img/italian-carrots-1536980-640x480.jpg">
+	<main class="container">
+		<div class="container__details">
+			<div class="">
+				<img class="details__img" src="../mocks/img/italian-carrots-1536980-640x480.jpg">
 			</div>
 
-			<div class="margin3 flex__col flex__col--between">
-				<div>
+			<div class="container__details__info">
+				<div class="container__details__description">
 					<strong>Yaya Hybrid</strong>
 					<p>
 						Suspendise dictum, lectus eget ultrices lobortis, orci totrot sagittis lacus, sit amet luctus sem ricus non telus. Sed id interdum nisl. Phaselus suscipit nisi finibus arcu malesuada, in consecteur augue ultrices. Aliquam vitae magna ricus. Curabitur malesuada, ipsum sollicitudin ultrices viverra, dui eros tompor nibh, sagittis dictum elit dui a mi. Nullam quis ligua nunc.
 					</p>
 				</div>
 
-				<div class="flex__col flex__col--right">
+				<div class="container__details__price">
 					<div>
-						<p>Price: <strong class="price--color">&nbsp;32&yen;</strong></p>
-						<button class="btn btn--m">Add to Card <i class="fas fa-shopping-cart"></i></button>
+						<p>Price: <strong class="">&nbsp;32&yen;</strong></p>
+						<button class="button">Add to Card <i class="fas fa-shopping-cart"></i></button>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div>
-			<div class="flex margin3">
+		<div class="container__comments">
+			<div class="comment">
 				<img class="comment__img" src="../mocks/img/bunnies-1394776-640x480.jpg">
-				<div>
-					<strong>Snoop</strong>
-					<p>Cras sit amet nib libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio vertibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-				</div>
+				<strong>Snoop</strong>
+				<p>Cras sit amet nib libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio vertibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
 			</div>
-			<div class="flex margin3">
+			</div>
+			<div class="comment">
 				<img class="comment__img" src="../mocks/img/mini-lop-bunny-1544971-640x608.jpg">
-				<div>
-					<strong>Comet</strong>
-					<p>Cras sit amet nib libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio vertibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-				</div>
+				<strong>Comet</strong>
+				<p>Cras sit amet nib libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio vertibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
 			</div>
-			<div class="flex margin3">
+			</div>
+			<div class="comment">
 				<img class="comment__img" src="../mocks/img/paule-rabbit-1381844-639x923.jpg">
-				<div>
-					<strong>Sunny</strong>
-					<p>Cras sit amet nib libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio vertibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-				</div>
+				<strong>Sunny</strong>
+				<p>Cras sit amet nib libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio vertibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+			</div>
 			</div>
 		</div>
-		<div class="flex flex--center margin3">
-			<div class="flex__col feedback-box">
+		<div class="container__feedback">
+			<div class="">
 				<p class="text--m">Leave a comment</p>
-				<span>Name</span>
-				<input type="text" name="name">
-				<p></p>
-				E-mail
-				<input type="email" name="email">
-				<p></p>
-				Comment
+				<label for="name">Name</label>
+				<input type="text" name="name" placeholder="Name">
+				<!-- <p></p> -->
+				<label for="email">E-mail</label>
+				<input type="email" name="email" placeholder="E-mail">
+				<!-- <p></p> -->
+				<label>Comment</label>
 				<textarea rows="5"></textarea>
 			</div>
 		</div>
@@ -82,37 +84,52 @@
 
 
 	<footer class="footer">
-		<div class="flex__col flex__col--right pad1">
-			<p><a class="link" href="#">RSS Feed</a></p>
-			<p><a class="link" href="#">Twitter</a></p>
-			<p><a class="link" href="#">Contact</a></p>
-		</div>
+			<div class="footer__top">
+				<div class="footer__top__links">
+					<p><a class="link" href="#">RSS Feed</a></p>
+					<p><a class="link" href="#">Twitter</a></p>
+					<p><a class="link" href="#">Contact</a></p>
+				</div>
+		
+				<div class="footer__top__p">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div>
+			
+				<div class="footer__top__logo">
+					<svg 
+						aria-hidden="true" 
+						focusable="false" 
+						data-prefix="fas" 
+						data-icon="carrot" 
+						class="svg-inline--fa fa-carrot fa-w-16" 
+						role="img" 
+						xmlns="http://www.w3.org/2000/svg" 
+						viewBox="0 0 512 512"
+					>
+						<path 
+							fill="currentColor" 
+							d="M298.2 156.6c-52.7-25.7-114.5-10.5-150.2 32.8l55.2 55.2c6.3 6.3 6.3 16.4 0 22.6-3.1 3.1-7.2 4.7-11.3 4.7s-8.2-1.6-11.3-4.7L130.4 217 2.3 479.7c-2.9 6-3.1 13.3 0 19.7 5.4 11.1 18.9 15.7 30 10.3l133.6-65.2-49.2-49.2c-6.3-6.2-6.3-16.4 0-22.6 6.3-6.2 16.4-6.2 22.6 0l57 57 102-49.8c24-11.7 44.5-31.3 57.1-57.1 30.1-61.7 4.5-136.1-57.2-166.2zm92.1-34.9C409.8 81 399.7 32.9 360 0c-50.3 41.7-52.5 107.5-7.9 151.9l8 8c44.4 44.6 110.3 42.4 151.9-7.9-32.9-39.7-81-49.8-121.7-30.3z"
+						>
+						</path>
+					</svg>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<a class="footer__bottom__link" href="">&copy; 2007-2019 Bunbun's & CO</a>
+			</div>
+		</footer>
 
-		<div class="flex__col pad1">
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
-			<a class="link" href="">&copy; 2007-2019 Bunbun's & CO</a>
-		</div>
-
-		<div class="flex__col flex__col--centered">
-			<svg 
-				aria-hidden="true" 
-				focusable="false" 
-				data-prefix="fas" 
-				data-icon="carrot" 
-				class="svg-inline--fa fa-carrot fa-w-16 logo" 
-				role="img" 
-				xmlns="http://www.w3.org/2000/svg" 
-				viewBox="0 0 512 512"
-			>
-				<path 
-					fill="currentColor" 
-					d="M298.2 156.6c-52.7-25.7-114.5-10.5-150.2 32.8l55.2 55.2c6.3 6.3 6.3 16.4 0 22.6-3.1 3.1-7.2 4.7-11.3 4.7s-8.2-1.6-11.3-4.7L130.4 217 2.3 479.7c-2.9 6-3.1 13.3 0 19.7 5.4 11.1 18.9 15.7 30 10.3l133.6-65.2-49.2-49.2c-6.3-6.2-6.3-16.4 0-22.6 6.3-6.2 16.4-6.2 22.6 0l57 57 102-49.8c24-11.7 44.5-31.3 57.1-57.1 30.1-61.7 4.5-136.1-57.2-166.2zm92.1-34.9C409.8 81 399.7 32.9 360 0c-50.3 41.7-52.5 107.5-7.9 151.9l8 8c44.4 44.6 110.3 42.4 151.9-7.9-32.9-39.7-81-49.8-121.7-30.3z"
-				>
-				</path>
-			</svg>
-		</div>
-	</footer>
+	<script>
+		function myFunction() {
+			var x = document.getElementById("myLinks");
+			if (x.style.display === "block") {
+			x.style.display = "none";
+			} else {
+			x.style.display = "block";
+			}
+		}
+	</script>
 </body>
 </html>
