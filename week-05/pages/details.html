@@ -7,21 +7,25 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../css/reset.css">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/auth.css">
 </head>
 <body>
-		<nav class="nav">
-				<span class="active nav__title">Bunbun's</span>
-				<div id="myLinks">
-					<a class="" href="./home.html">Home</a>
-					<a class="" href="./list.html">List</a>
-					<span class="push" href="#"></span>
-					<a class=" fas fa-shopping-cart" href="#">&nbsp;Cart</a>
-					<a class="" href="#">Log&nbsp;In</a>
-				</div>
-				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-					<i class="fa fa-bars fa-2x"></i>
-				</a>
-			</nav>
+	<nav class="nav">
+		<span class="active nav__title">Bunbun's</span>
+		<div id="myLinks">
+			<a class="" href="./home.html">Home</a>
+			<a class="" href="./list.html">List</a>
+			<span class="push" href="#"></span>
+			<a id="userDisplay" href="#"></a>
+			<a class=" fas fa-shopping-cart" href="#">&nbsp;Cart</a>
+			<a id="btnLog" href="#">Log&nbsp;In</a>
+			<a id="btnReg" href="#">Register</a>
+			<a id="btnLogOut" href="#">Log&nbsp;Out</a>
+		</div>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars fa-2x"></i>
+		</a>
+	</nav>
 
 	<main class="container">
 		<div class="container__details">
@@ -131,5 +135,7 @@
 			}
 		}
 	</script>
+	<script src="../models/Auth.js"></script>
+	<script src="../views/auth.js"></script>
 </body>
 </html>
