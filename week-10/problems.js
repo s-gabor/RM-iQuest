@@ -10,9 +10,11 @@ var strArr = ['13', '2', '34', '14', '5', '86', '3.46'];
 
 function typeCastAndAdd(strArr) {
   var newArr = [];
+
   for (var i = 0; i < strArr.length; i++) {
     newArr.push(parseFloat(strArr[i]) + 2);
   }
+
   return newArr;
 }
 console.log('Typecast: ', typeCastAndAdd(strArr));
@@ -34,9 +36,11 @@ const demoArr = [
 
 const pluck = (arr, key) => {
   const pluckedArr = [];
+
   for (let obj of arr) {
     pluckedArr.push(obj[key]);
   }
+
   return pluckedArr;
 }
 console.log(pluck(demoArr, 'color'));  // => ['red', 'green', 'turqoize' .......];
@@ -47,10 +51,11 @@ console.log(pluck(demoArr, 'color'));  // => ['red', 'green', 'turqoize' .......
   din array-ul de mai sus, aria e inaltime * latime.
 */
 
-const calculateArea = (arr) => {
+const calculateArea = arr => {
   const heightArr = pluck(arr, 'height');
   const widthArr = pluck(arr, 'width');
   const areaArr = heightArr.map((height, index) => height * widthArr[index]);
+
   return areaArr;
 }
 console.log(calculateArea(demoArr));
@@ -61,8 +66,9 @@ console.log(calculateArea(demoArr));
   unde elementele au aria mai mica sau egala cu 100
 */
 
-const filterArr = (arr) => {
+const filterArr = arr => {
   const areaArr = calculateArea(arr);
+
   return areaArr.filter(num => num <= 100);
 }
 console.log(filterArr(demoArr));
@@ -105,6 +111,7 @@ console.log(findColor(demoArr, 'crimson'));
 const areasAreBigger = (arr, number) => {
   const areaArr = calculateArea(arr);
   const filteredArr = areaArr.filter(num => num >= number);
+
   return filteredArr.length === areaArr.length;
 }
 console.log(areasAreBigger(demoArr, 10));
@@ -117,6 +124,7 @@ console.log(areasAreBigger(demoArr, 10));
 
 const atLeastOneIsOfColor = (arr, color) => {
   const colorArr = pluck(arr, 'color');
+
   return colorArr.includes(color); // color OR 'green' ???
 }
 console.log(atLeastOneIsOfColor(demoArr, 'balarie')); // 'balarie' OR 'green' ???
@@ -125,8 +133,9 @@ console.log(atLeastOneIsOfColor(demoArr, 'balarie')); // 'balarie' OR 'green' ??
 8. Sa se scrie o functie care returneaza distanta totala (suma distantelor elementelor)
 */
 
-const sumOfDistances = (arr) => {
+const sumOfDistances = arr => {
   const distanceArr = pluck(arr, 'distance');
+
   return distanceArr.reduce((num1, num2) => num1 + num2);
 }
 console.log('Sum of distances: ', sumOfDistances(demoArr));
@@ -138,15 +147,16 @@ console.log('Sum of distances: ', sumOfDistances(demoArr));
   {red: 2, blue: 1, etc...}
 */
 
-const noColors = (arr) => {
+const noColors = arr => {
   const colorArr = pluck(arr, 'color');
-  const colorCountsObj = {}
+  const colorCountsObj = {};
+
   for (let color of colorArr) {
     Object.keys(colorCountsObj).includes(color)
       ? colorCountsObj[color] += 1
       : colorCountsObj[color] = 1
-    
   }
+
   return colorCountsObj;
 }
 console.log('Number of colors: ', noColors(demoArr));
@@ -157,14 +167,17 @@ console.log('Number of colors: ', noColors(demoArr));
   Oricare element dupa primul care are o culoare care s-ar repeta nu este inclus in array.
 */
 
-const  uniqueColors = (arr) => {
+const  uniqueColors = arr => {
   const filteredArr = [];
+
   for (let obj of arr) {
     const colorFilteredArr = pluck(filteredArr, 'color');
+
     if (!colorFilteredArr.includes(obj.color)) {
       filteredArr.push(obj);
     }
   }
+
   return filteredArr;
 }
 console.log('Unique Colors: ', uniqueColors(demoArr));
