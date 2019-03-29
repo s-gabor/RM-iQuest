@@ -1,12 +1,13 @@
 import Todo from "./todo";
 
-const AddToDo = () => {
-    const $input = document.querySelector('input[name="new-todo"]');
-    Todo($input.value);
+class AddToDo {
+    constructor() {
+        const $button = document.querySelector('button');
+        $button.addEventListener('click', () => {
+            const $input = document.querySelector('input[name="new-todo"]');
+            new Todo($input.value);
+        });
+    }
 }
-
-// class AddToDo {
-//     // code here
-// }
 
 export default AddToDo;

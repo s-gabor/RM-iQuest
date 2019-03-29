@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _todo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./todo */ \"./src/components/todo.js\");\n\n\nconst AddToDo = () => {\n    const $input = document.querySelector('input[name=\"new-todo\"]');\n    Object(_todo__WEBPACK_IMPORTED_MODULE_0__[\"default\"])($input.value);\n}\n\n// class AddToDo {\n//     // code here\n// }\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (AddToDo);\n\n//# sourceURL=webpack:///./src/components/add-todo.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _todo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./todo */ \"./src/components/todo.js\");\n\n\nclass AddToDo {\n    constructor() {\n        const $button = document.querySelector('button');\n        $button.addEventListener('click', () => {\n            const $input = document.querySelector('input[name=\"new-todo\"]');\n            new _todo__WEBPACK_IMPORTED_MODULE_0__[\"default\"]($input.value);\n        });\n    }\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (AddToDo);\n\n\n//# sourceURL=webpack:///./src/components/add-todo.js?");
 
 /***/ }),
 
@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _tod
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _todos__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./todos */ \"./src/components/todos.js\");\n/* harmony import */ var _add_todo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./add-todo */ \"./src/components/add-todo.js\");\n\n\n\nconst App = () => {\n  const $liClasses = document.querySelectorAll('.todo');\n  Object(_todos__WEBPACK_IMPORTED_MODULE_0__[\"default\"])($liClasses);\n  \n  const $button = document.querySelector('button');\n  $button.addEventListener('click', _add_todo__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n}\n\n// class App {\n//   constructor() {\n//     new Todos();\n//     new AddTodo();\n//   }\n// }\n\ndocument.addEventListener('DOMContentLoaded' , App);\n\n\n//# sourceURL=webpack:///./src/components/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _todos__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./todos */ \"./src/components/todos.js\");\n/* harmony import */ var _add_todo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./add-todo */ \"./src/components/add-todo.js\");\n\n\n\nclass App {\n  constructor() {\n    new _todos__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\n    new _add_todo__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\n  }\n}\n\ndocument.addEventListener('DOMContentLoaded' , () => {\n  new App();\n});\n\n\n//# sourceURL=webpack:///./src/components/app.js?");
 
 /***/ }),
 
@@ -118,7 +118,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _tod
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _helpers_toggle_completed__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helpers/toggle-completed */ \"./src/helpers/toggle-completed.js\");\n\n\nconst Todo = (todo) => {\n    const $todoList = document.querySelector('.todos');\n\n    const $newTodo = document.createElement('li');\n\n    $newTodo.addEventListener('click', _helpers_toggle_completed__WEBPACK_IMPORTED_MODULE_0__[\"default\"]);\n    $newTodo.classList.add('todo');\n    $newTodo.appendChild(document.createTextNode(todo));\n    \n    $todoList.appendChild($newTodo);\n}\n\n// class Todo {\n//     // code here\n// }\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Todo);\n\n\n//# sourceURL=webpack:///./src/components/todo.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _helpers_toggle_completed__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helpers/toggle-completed */ \"./src/helpers/toggle-completed.js\");\n\n\nclass Todo {\n    constructor(todo) {\n        const $todoList = document.querySelector('.todos');\n        const $newTodo = document.createElement('li');\n\n        $newTodo.addEventListener('click', _helpers_toggle_completed__WEBPACK_IMPORTED_MODULE_0__[\"default\"]);\n        $newTodo.classList.add('todo');\n        $newTodo.appendChild(document.createTextNode(todo));\n        \n        $todoList.appendChild($newTodo);\n    }\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Todo);\n\n\n//# sourceURL=webpack:///./src/components/todo.js?");
 
 /***/ }),
 
@@ -130,7 +130,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hel
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _helpers_toggle_completed__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helpers/toggle-completed */ \"./src/helpers/toggle-completed.js\");\n\n\nconst Todos = (todos) => {\n  todos.forEach(todo => {\n    todo.addEventListener('click', _helpers_toggle_completed__WEBPACK_IMPORTED_MODULE_0__[\"default\"]);\n  });\n}\n\n// class Todos {\n//   constructor() {\n//     new Todo();\n//   }\n// }\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Todos);\n\n\n//# sourceURL=webpack:///./src/components/todos.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _helpers_toggle_completed__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helpers/toggle-completed */ \"./src/helpers/toggle-completed.js\");\n\n\nclass Todos {\n  constructor() {\n    // new Todo();\n    const todos = document.querySelectorAll('.todo');\n    todos.forEach(todo => {\n      todo.addEventListener('click', _helpers_toggle_completed__WEBPACK_IMPORTED_MODULE_0__[\"default\"]);\n    });\n  }\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Todos);\n\n\n//# sourceURL=webpack:///./src/components/todos.js?");
 
 /***/ }),
 
